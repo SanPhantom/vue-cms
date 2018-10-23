@@ -17,6 +17,8 @@ Vue.http.options.root = 'http://www.liulongbin.top:3005';
 Vue.filter('dateFormat', function (dateStr, pattern='YYYY-MM-DD HH:mm:ss') {
     return moment(dateStr).format(pattern);
 });
+//全局配置post提交方式为表单
+Vue.http.options.emulateJSON = true;
 
 let vm = new Vue({
     el: '#app',

@@ -7,6 +7,7 @@ import Cart from './components/tabBar/cart.vue'
 import Search from './components/tabBar/search.vue'
 import NewsList from './components/news/newsList.vue'
 import NewsInfo from './components/news/newsInfo.vue'
+import PhotoList from './components/photos/photoList.vue'
 
 Vue.use(VueRouter);
 
@@ -20,6 +21,7 @@ let router= new VueRouter({
         {path: '/search', component: Search},
         {path: '/home/newsList', component: NewsList},
         {path: '/home/newsInfo/:id', component: NewsInfo},
+        {path: '/home/photoList', component: PhotoList},
     ],
 });
 

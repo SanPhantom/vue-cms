@@ -6,15 +6,20 @@
             <span class="mui-pull-right">点击：{{newsInfo.click}}</span>
         </p>
         <hr/>
-        <div v-html="newsInfo.content">
+        <div class="content" v-html="newsInfo.content">
         
         </div>
+        <comment-box :id="this.id"></comment-box>
     </div>
 </template>
 
 <script>
+    import comment from '../subcomponents/comment.vue'
     export default {
         name: "newsInfo",
+        components: {
+            commentBox: comment,
+        },
         data() {
            return {
                id: this.$route.params.id,
@@ -37,16 +42,18 @@
     }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
     .mui-popup-title {
         color: red;
         margin: 15px 0;
         font-weight: bold;
     }
-    .content {
-        width: 100%;
+    .content p {
+        text-indent: 2em;
+    }
+    .news-info-container {
         img {
-            width: 100%;
+            width: 100% !important;
         }
     }
 </style>
