@@ -7,7 +7,10 @@ import './lib/mui/css/icons-extra.css'
 import router from './router.js'
 import VueResource from 'vue-resource'
 import moment from 'moment'
+import VuePreview from 'vue-preview'
 
+
+Vue.use(VuePreview);
 Vue.use(MintUI);
 Vue.use(VueResource);
 

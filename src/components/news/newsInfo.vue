@@ -3,7 +3,7 @@
         <h3 class=" mui-h3 mui-popup-title">{{newsInfo.title}}</h3>
         <p class="mui-subtitle mui-clearfix">
             <span class="mui-pull-left">发表时间：{{newsInfo.add_time | dateFormat}}</span>
-            <span class="mui-pull-right">点击：{{newsInfo.click}}</span>
+            <span class="mui-pull-right">点击：{{newsInfo.click}}次</span>
         </p>
         <hr/>
         <div class="content" v-html="newsInfo.content">
